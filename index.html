@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spencer Roeren — Full-Stack SWE</title>
+<meta name="description" content="Spencer Roeren — full-stack software engineer, Oakland University '27, Metro Detroit, MI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="terminal-wrap">
+  <div class="terminal">
+
+    <div class="titlebar">
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <span class="titlebar-name">spencer@roeren — zsh</span>
+      <span class="titlebar-status" id="status-line">open to swe internships · 2027 new grad</span>
+    </div>
+
+    <nav class="navbar">
+      <a href="#home" class="nav-link" data-page="home">~/</a>
+      <a href="#work" class="nav-link" data-page="work">~/work</a>
+      <a href="#projects" class="nav-link" data-page="projects">~/projects</a>
+      <a href="#about" class="nav-link" data-page="about">~/about</a>
+      <span class="nav-social">
+        <a href="https://github.com/stroeren" target="_blank" rel="noopener">github ↗</a>
+        <a href="https://www.linkedin.com/in/stroeren/" target="_blank" rel="noopener">linkedin ↗</a>
+        <a href="https://devpost.com/stroeren" target="_blank" rel="noopener">devpost ↗</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">resume.pdf ↓</a>
+      </span>
+    </nav>
+
+    <main class="content">
+
+      <!-- HOME -->
+      <section class="page" data-page="home">
+        <div class="boot" id="boot">
+          <div>Last login: today on ttys001</div>
+          <div>loading ~/.zshrc … ok</div>
+          <div>coffee: <span class="accent">available</span> · caffeine level: nominal</div>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~</span> whoami</div>
+        <h1 class="hero-name">spencer<br>roeren</h1>
+        <div class="hero-sub">
+          <span>full-stack swe</span><span class="sep">│</span><span>oakland university '27</span><span class="sep">│</span><span>metro detroit, mi</span>
+          <span class="cursor"></span>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~</span> cat about.txt</div>
+        <p class="body-text">I write backend and frontend code, and I'm annoyingly into the parts nobody puts on a slide — tests that actually catch things, containers that behave the same everywhere, static analysis that stops bad code before a customer finds it.</p>
+        <p class="body-text" style="margin-bottom: 38px;">Last summer that meant shipping features inside mortgage software used by the largest lender in the world. This year: junior at Oakland University, training prediction models for fun, and helping run GrizzHacks.</p>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~</span> ls skills/</div>
+        <div class="skills-grid">
+          <div class="skill-col">
+            <div class="skill-label">LANGUAGES</div>
+            <div class="skill-list">C#<br>Python<br>Java<br>JavaScript<br>SQL</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-label">FRAMEWORKS</div>
+            <div class="skill-list">.NET<br>React<br>JavaFX<br>PowerApps<br>Tkinter</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-label">TESTING &amp; QUALITY</div>
+            <div class="skill-list">NUnit / xUnit<br>Integration tests<br>SonarQube<br>Snyk<br>Code review</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-label">INFRA &amp; TOOLS</div>
+            <div class="skill-list">Docker<br>Jenkins<br>Git / GitHub<br>PostgreSQL<br>Power Automate</div>
+          </div>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~</span> systemctl status spencer</div>
+        <div class="status-box">
+          <div class="status-title"><span class="accent">●</span> spencer.service — actively looking</div>
+          <div class="status-body">
+            Loaded: <span class="strong">junior year, B.S. Computer Science (May 2027)</span><br>
+            Active: <span class="accent">open</span> to SWE internships and 2027 new-grad roles<br>
+            Uptime: <span class="strong">2 internships, 4 self-directed builds, 1 hackathon win</span><br>
+            Tasks: <span class="strong">coursework, GrizzHacks organizing, piano</span>
+          </div>
+        </div>
+
+        <div class="cmd-hint">try it — type <span class="accent">help</span>, or <span class="accent">cd projects</span></div>
+        <div class="cmd-bar">
+          <span class="accent cmd-arrow">➜</span>
+          <span class="prompt-dir" id="cmd-cwd">~</span>
+          <input type="text" id="cmd-input" class="cmd-input" placeholder="help" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="cmd-log" id="cmd-log"></div>
+      </section>
+
+      <!-- WORK -->
+      <section class="page" data-page="work" hidden>
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/work</span> cat *.log</div>
+        <h1 class="page-title">experience</h1>
+        <p class="page-sub">Two internships so far — one deep in a production .NET/React codebase, one building internal tools that real teams used every day.</p>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">UWM</span>
+            <span class="card-role">full stack intern</span>
+            <span class="card-meta">MAY 2025 → AUG 2025 · PONTIAC, MI</span>
+          </div>
+          <div class="card-desc">BOLT — flagship mortgage underwriting platform for the largest mortgage lender in the world</div>
+          <div class="bullets">
+            <div class="bullet"><span class="accent">›</span><span>Resolved <span class="strong">10+ backend and frontend stories</span> in .NET and React, improving reliability and day-to-day user experience.</span></div>
+            <div class="bullet"><span class="accent">›</span><span>Increased coverage with <span class="strong">unit tests (NUnit, xUnit)</span> and integration tests, using Docker to keep validation consistent across environments.</span></div>
+            <div class="bullet"><span class="accent">›</span><span>Hardened security by remediating <span class="strong">100+ code smells and vulnerabilities</span> surfaced through SonarQube and Snyk.</span></div>
+          </div>
+          <div class="tags">
+            <span class="tag">C#</span><span class="tag">.NET</span><span class="tag">React</span><span class="tag">Docker</span><span class="tag">NUnit / xUnit</span><span class="tag">SonarQube</span><span class="tag">Snyk</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 40px;">
+          <div class="card-head">
+            <span class="card-title">Johnson Electric</span>
+            <span class="card-role">it intern</span>
+            <span class="card-meta">JUN 2024 → AUG 2024 · LIVONIA, MI</span>
+          </div>
+          <div class="card-desc">Internal tooling and process automation across HR, engineering, and finance</div>
+          <div class="bullets">
+            <div class="bullet"><span class="accent">›</span><span>Built <span class="strong">PowerApps applications</span> — an onboarding system plus two time-tracking apps for project managers in Hong Kong and local engineering.</span></div>
+            <div class="bullet"><span class="accent">›</span><span>Designed an <span class="strong">end-to-end onboarding workflow</span> that streamlined new-hire transitions across multiple departments.</span></div>
+            <div class="bullet"><span class="accent">›</span><span>Automated finance paperwork with a <span class="strong">Power Automate Desktop flow</span> that splits and renames PDFs based on their contents.</span></div>
+            <div class="bullet"><span class="accent">›</span><span>Partnered with HR, engineering, and finance to tailor solutions to regional and departmental needs.</span></div>
+          </div>
+          <div class="tags">
+            <span class="tag">PowerApps</span><span class="tag">Power Automate</span><span class="tag">Process design</span>
+          </div>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/work</span> cat community.log</div>
+        <div class="two-col-grid">
+          <div class="info-box">
+            <div class="skill-label">HACKATHONS</div>
+            <div class="info-heading">First-place win 🏆</div>
+            <p class="info-text">Built and won with a team under a weekend deadline. Devpost has the build log and demo.</p>
+          </div>
+          <div class="info-box">
+            <div class="skill-label">ORGANIZING</div>
+            <div class="info-heading">GrizzHacks</div>
+            <p class="info-text">On the organizing team for Oakland University's hackathon — the other side of the table, making the weekend work for everyone else.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="page" data-page="projects" hidden>
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/projects</span> ls -la</div>
+        <h1 class="page-title">projects</h1>
+        <p class="page-sub">Things I built because I wanted them to exist. Mostly machine learning, data pipelines, and one game engine written the hard way on purpose.</p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-head">
+              <span class="project-num">01</span>
+              <span class="project-name">stock-prediction/</span>
+              <span class="project-status">repo link coming soon</span>
+            </div>
+            <p class="project-desc">A stacked ensemble — LSTM for sequence structure, XGBoost for everything it misses — predicting stock movement from real-time market data, fed by a Python ETL pipeline that handles ingestion and feature prep.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">XGBoost</span><span class="tag">ETL</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-head">
+              <span class="project-num">02</span>
+              <span class="project-name">fantasy-projections/</span>
+              <span class="project-status">repo link coming soon</span>
+            </div>
+            <p class="project-desc">A stacked regressor for fantasy football player projections, with an automated BeautifulSoup + Selenium scraping pipeline keeping the training data fresh every week. Built to win my league. Jury's out.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">BeautifulSoup</span><span class="tag">Selenium</span><span class="tag">scikit-learn</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-head">
+              <span class="project-num">03</span>
+              <span class="project-name">javafx-engine/</span>
+              <span class="project-status">repo link coming soon</span>
+            </div>
+            <p class="project-desc">A 2D game and the engine under it, written from scratch in JavaFX — predictive collision detection instead of after-the-fact correction, and a state-based architecture so game logic stays separated from rendering.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">Game loop</span><span class="tag">OOP design</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-head">
+              <span class="project-num">04</span>
+              <span class="project-name">pokedex/</span>
+              <span class="project-status">repo link coming soon</span>
+            </div>
+            <p class="project-desc">A full-stack Pokédex: PostgreSQL schema, a Python ETL job for ingestion, and an interactive Tkinter GUI on top. Good excuse to design a relational model for data I actually care about.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span><span class="tag">Tkinter</span></div>
+          </div>
+        </div>
+
+        <div class="projects-footer">More on <a href="https://github.com/stroeren" target="_blank" rel="noopener">github.com/stroeren</a> and <a href="https://devpost.com/stroeren" target="_blank" rel="noopener">devpost.com/stroeren</a>.</div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="page" data-page="about" hidden>
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/about</span> cat me.md</div>
+        <h1 class="page-title">about</h1>
+        <p class="page-sub">Full-stack developer with real experience in backend, frontend, automated testing, and application security — and a habit of building things nobody asked for.</p>
+
+        <div class="two-col-grid" style="margin-bottom: 40px;">
+          <div class="info-box">
+            <div class="skill-label">EDUCATION</div>
+            <div class="edu-degree">B.S. Computer Science</div>
+            <div class="edu-school accent">Oakland University · Auburn Hills, MI</div>
+            <div class="edu-meta">GPA 3.7 · Sep 2022 → May 2027 (expected)</div>
+            <div class="hr"></div>
+            <div class="edu-degree" style="font-size:16px;">Adams High School</div>
+            <div class="edu-meta">GPA 4.2 · Rochester, MI · 2018 → 2022</div>
+          </div>
+          <div class="info-box">
+            <div class="skill-label">NOW — SUMMER 2026</div>
+            <div class="now-list">
+              <div><span class="accent">›</span> Tuning the stacked models behind my stock and fantasy football projects.</div>
+              <div><span class="accent">›</span> Organizing GrizzHacks with the team at Oakland.</div>
+              <div><span class="accent">›</span> Reading up on secure coding and CI pipeline design.</div>
+              <div><span class="accent">›</span> Looking for my next internship or a 2027 new-grad seat.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/about</span> lspci --my-first-build</div>
+        <div class="build-box">
+          <div class="build-head">
+            <div class="build-title">My first PC build</div>
+            <p class="build-sub">Picked every part myself, put it together, and it's still the machine I write code on.</p>
+          </div>
+          <div class="build-grid">
+            <div class="build-col">
+              <div class="build-row"><span class="build-key">cpu</span><span class="build-val">AMD Ryzen 5 5600X · 3.7 GHz 6-core</span></div>
+              <div class="build-row"><span class="build-key">motherboard</span><span class="build-val">Asus TUF Gaming X570-PLUS (Wi-Fi)</span></div>
+              <div class="build-row"><span class="build-key">gpu</span><span class="build-val">EVGA XC RTX 3060 · 12 GB</span></div>
+              <div class="build-row"><span class="build-key">memory</span><span class="build-val">G.Skill Ripjaws V 32 GB DDR4-3200</span></div>
+              <div class="build-row"><span class="build-key">storage</span><span class="build-val">Samsung 970 Evo Plus 1 TB NVMe</span></div>
+            </div>
+            <div class="build-col">
+              <div class="build-row"><span class="build-key">storage</span><span class="build-val">Seagate Barracuda 2 TB 7200 RPM</span></div>
+              <div class="build-row"><span class="build-key">psu</span><span class="build-val">EVGA SuperNOVA 650 GA · 80+ Gold</span></div>
+              <div class="build-row"><span class="build-key">case</span><span class="build-val">Fractal Design Meshify C ATX</span></div>
+              <div class="build-row"><span class="build-key">thermal</span><span class="build-val">Arctic Silver 5 · 3.5 g</span></div>
+              <div class="build-row"><span class="build-key">keyboard</span><span class="build-val">Corsair K55 RGB wired</span></div>
+            </div>
+          </div>
+          <div class="build-footer">10 parts · one very long Saturday</div>
+        </div>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/about</span> cat offline.txt</div>
+        <p class="body-text" style="margin-bottom: 44px; max-width: 700px;">Away from a keyboard I'm usually at a piano — I've played for years and still mess around with writing my own stuff. Music runs in the background of everything I do, and when it isn't music it's video games, which are what got me building that PC in the first place. The rest of my time goes to friends, hackathon weekends, and whatever project has currently hijacked my attention.</p>
+
+        <div class="prompt-line"><span class="accent">➜</span> <span class="prompt-dir">~/about</span> ./contact.sh</div>
+        <div class="contact-box">
+          <div class="contact-title">Let's talk.</div>
+          <p class="contact-text">Hiring, collaborating, or just want to argue about test coverage — LinkedIn is the fastest way to reach me.</p>
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/stroeren/" target="_blank" rel="noopener" class="btn btn-primary">linkedin ↗</a>
+            <a href="https://github.com/stroeren" target="_blank" rel="noopener" class="btn btn-outline">github ↗</a>
+            <a href="https://devpost.com/stroeren" target="_blank" rel="noopener" class="btn btn-outline">devpost ↗</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">resume.pdf ↓</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="footer-bar">
+      <span class="accent">● main</span>
+      <span>spencer roeren · metro detroit, mi</span>
+      <span class="footer-year">built by hand · 2026</span>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
