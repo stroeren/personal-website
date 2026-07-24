@@ -211,17 +211,24 @@ input::placeholder { color: var(--text-verydim); }
 }
 
 /* Cell grids — column counts are set explicitly per breakpoint so the
-   item count always divides evenly and no empty cells show through. */
+   item count always divides evenly and no empty cells show through.
+
+   Dividers are real borders on the cells rather than a 1px grid gap letting
+   the container background show through. At this contrast a background sliver
+   landing on a fractional device pixel gets anti-aliased across two pixels at
+   half intensity and reads as absent, so individual dividers appeared to go
+   missing depending on window width. A border is painted and pixel-snapped. */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--border);
+  background: var(--panel-bg);
   border: 1px solid var(--border);
   border-radius: 4px;
+  overflow: hidden;
   margin-bottom: 2.5rem;
 }
 .skill-col { background: var(--panel-bg); padding: 1rem 1.125rem; min-width: 0; }
+.skill-col + .skill-col { border-left: 1px solid var(--border); }
 .skill-label { font-size: 0.6875rem; letter-spacing: 0.16em; color: var(--text-label); margin-bottom: 0.625rem; }
 .skill-list { font-size: 0.84375rem; color: #d5e0d9; line-height: 1.9; }
 
@@ -330,12 +337,13 @@ input::placeholder { color: var(--text-verydim); }
 .two-col-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--border);
+  background: var(--panel-bg);
   border: 1px solid var(--border);
   border-radius: 4px;
+  overflow: hidden;
 }
 .info-box { background: var(--panel-bg); padding: 1.375rem 1.5rem; min-width: 0; }
+.info-box + .info-box { border-left: 1px solid var(--border); }
 .info-heading { font-size: 1rem; color: var(--text-primary); margin-bottom: 0.5rem; }
 .info-text { margin: 0; font-size: 0.875rem; line-height: 1.7; color: var(--text-muted); }
 
@@ -410,7 +418,13 @@ input::placeholder { color: var(--text-verydim); }
     --content-pad-bottom: 2.25rem;
   }
 
+  /* 2 columns x 2 rows: left border on the right-hand cell of each row,
+     top border on the second row. */
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-col + .skill-col { border-left: none; }
+  .skill-col:nth-child(2n) { border-left: 1px solid var(--border); }
+  .skill-col:nth-child(n + 3) { border-top: 1px solid var(--border); }
+
   .build-grid { grid-template-columns: 1fr; }
   .build-col:first-child { border-right: none; }
 }
@@ -438,6 +452,7 @@ input::placeholder { color: var(--text-verydim); }
   }
 
   .two-col-grid { grid-template-columns: 1fr; }
+  .info-box + .info-box { border-left: none; border-top: 1px solid var(--border); }
 
   .card { padding: 1.375rem 1.25rem; }
   .project-card { padding: 1.375rem 1.25rem; }
@@ -476,7 +491,10 @@ input::placeholder { color: var(--text-verydim); }
 
   .terminal { border-radius: 6px; }
 
+  /* Single column: dividers become horizontal only. */
   .skills-grid { grid-template-columns: 1fr; }
+  .skill-col:nth-child(2n) { border-left: none; }
+  .skill-col:nth-child(n + 2) { border-top: 1px solid var(--border); }
 
   .hero-sub { gap: 0.5rem; }
 
